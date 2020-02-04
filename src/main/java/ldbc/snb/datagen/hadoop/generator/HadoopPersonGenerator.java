@@ -166,6 +166,9 @@ public class HadoopPersonGenerator {
         job.setJarByClass(HadoopPersonGeneratorMapper.class);
         job.setMapperClass(HadoopPersonGeneratorMapper.class);
         job.setReducerClass(HadoopPersonGeneratorReducer.class);
+
+        FileInputFormat.setMaxInputSplitSize(job, conf.getLong(FileInputFormat.SPLIT_MAXSIZE, 1L));
+
         job.setNumReduceTasks(numThreads);
         job.setInputFormatClass(NLineInputFormat.class);
         job.setOutputFormatClass(SequenceFileOutputFormat.class);

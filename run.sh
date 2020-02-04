@@ -27,7 +27,7 @@ echo HADOOP_HOME: $HADOOP_HOME
 echo HADOOP_CLIENT_OPTS: $HADOOP_CLIENT_OPTS
 echo ===============================================================================
 
-mvn clean
+#mvn clean
 mvn -DskipTests assembly:assembly
 
 if [ "$(uname)" == "Darwin" ]; then
