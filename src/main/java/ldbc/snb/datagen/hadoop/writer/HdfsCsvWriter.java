@@ -41,7 +41,7 @@ import java.util.List;
 
 public class HdfsCsvWriter extends HdfsWriter {
 
-    private String separator = "|";
+    private String separator = ",";
     private StringBuffer buffer;
     private boolean endLineSeparator = true;
 
